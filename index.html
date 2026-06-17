@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe | 2 Player & AI Mode</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-blobs"></div>
+    
+    <div class="container">
+        <header>
+            <h1>Tic-Tac-Toe</h1>
+            <p class="subtitle" id="game-mode-subtitle">2 Player Mode</p>
+        </header>
+
+        <div class="scoreboard">
+            <div class="score-card player-x">
+                <span class="label" id="label-x">PLAYER 1 (X)</span>
+                <span class="value" id="score-x">0</span>
+            </div>
+            <div class="score-card draw">
+                <span class="label">DRAW</span>
+                <span class="value" id="score-draw">0</span>
+            </div>
+            <div class="score-card player-o">
+                <span class="label" id="label-o">PLAYER 2 (O)</span>
+                <span class="value" id="score-o">0</span>
+            </div>
+        </div>
+
+        <div id="status" class="status-bar">Player 1's Turn</div>
+
+        <div class="board" id="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+
+        <div class="controls">
+            <button id="restart-btn" class="btn btn-primary">Restart Game</button>
+            <button id="settings-btn" class="btn btn-secondary">Settings</button>
+        </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="modal-overlay" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Game Settings</h2>
+            
+            <div class="setting-item">
+                <span>Play vs AI (Unbeatable)</span>
+                <label class="switch">
+                    <input type="checkbox" id="ai-toggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="setting-item">
+                <span>Sound Effects</span>
+                <label class="switch">
+                    <input type="checkbox" id="sound-toggle" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="modal-actions">
+                <button id="reset-score-btn" class="btn btn-danger">Reset Scores</button>
+                <button id="close-modal-btn" class="btn btn-primary">Done</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
